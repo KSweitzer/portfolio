@@ -1,18 +1,49 @@
 <!-- portfolio/templates/portfolio/home.html -->
+
 {% extends 'base/base.html' %}
 
-{% block title %}Home - My Portfolio{% endblock %}
+{% block title %}Kevin Sweitzer{% endblock %}
 
 {% block content %}
-    <h1>Welcome to My Portfolio!</h1>
-    {% for project in projects %}
-        <div class="project">
-            <h2>{{ project.title }}</h2>
-            <p>{{ project.description }}</p>
-            <img src="{{ project.image.url }}" alt="{{ project.title }}">
-            {% if project.link %}
-                <p><a href="{{ project.link }}" target="_blank">Visit project</a></p>
-            {% endif %}
+<section id="about" class="about-section">
+    <div class="about-container">
+        <h2>About Me</h2>
+        <p>
+            Welcome to my portfolio! I am passionate about coding and building awesome projects.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+</section>
+
+<section id="projects" class="projects-section">
+    <div class="projects-container">
+        <h2>My Projects</h2>
+
+        <div class="project" data-aos="fade-up">
+            <h3>Project 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula tristique finibus.
+                Sed laoreet aliquet ipsum, id rhoncus nunc tempor vitae.
+            </p>
         </div>
-    {% endfor %}
+
+        <div class="project" data-aos="fade-up">
+            <h3>Project 2</h3>
+            <p>
+                Nunc tincidunt justo vel est venenatis, id lacinia ex vestibulum. 
+                Aliquam erat volutpat. Aenean vel justo vel purus commodo tincidunt.
+            </p>
+        </div>
+
+        <div class="project" data-aos="fade-up">
+            <h3>Project 3</h3>
+            <p>
+                Vestibulum tempus nisi vel lectus dictum, nec volutpat metus fermentum. 
+                Proin id elit vel erat imperdiet luctus. Curabitur nec consequat ligula.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- Add other sections or content as needed -->
 {% endblock %}
